@@ -1,0 +1,45 @@
+<% include header %>
+<div class="am-g user-index-list">
+	<!--头像-->
+	<div class="am-u-sm-10 am-u-sm-offset-2 ">
+        <a href="/users/detail">
+            <div class="user-info am-fl">
+                <img class="header-pic" src="/assets/dist/images/game2.png" />
+                <p>lideyang-good</p>
+                <p class="text-miss">用户登录账号:1930110@qq.com</p>
+            </div>
+            <i class="am-icon-chevron-right text-miss am-fr"></i>
+        </a>
+	</div>
+	<div class="am-u-sm-10 am-u-sm-offset-2">
+		<!--列表-->
+		<ul class="am-list">
+			<li>
+				<a href="/users/balance"><i class="am-icon-money am-icon-fw text-info"></i><span>账户余额：518.00</span></a>
+			</li>
+			<li>
+				<a href="/users/temporaryBoxer"><i class="am-icon-shopping-cart am-icon-fw text-info"></i><span>暂存箱</span></a>
+			</li>
+			<li>
+				<a href="/users/myBid"><i class="am-icon-pencil am-icon-fw text-info"></i><span>我的投标</span></a>
+			</li>
+			<li>
+				<a href="/users/myCollection"><i class="am-icon-star-o am-icon-fw text-info"></i><span>我的收藏</span></a>
+			</li>
+			<li>
+				<a href="/users/myOrder"><i class="am-icon-file-text-o am-icon-fw text-info"></i><span>订单详情</span></a>
+			</li>
+
+		</ul>
+	</div>
+</div>
+<div class="am-container">
+	<a class="am-btn am-btn-primary am-btn-block am-radius">退出登录</a>
+</div>
+<% include ../footer %>
+
+<script>
+	seajs.use(['users/index'], function (main) {
+		main.init();
+	})
+</script>

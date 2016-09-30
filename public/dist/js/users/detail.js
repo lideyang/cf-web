@@ -1,0 +1,1 @@
+define(function(require,exports,module){var $=require("jquery");module.exports={init:function(){require("amazeUI"),$("#headerBtn").on("click",function(){}),$("#nickNameBtn").on("click",function(){$("#nickNameModal").modal({closeViaDimmer:!1})})},upload:function(n){var o=require("tools");$("#uploadInput").on("change",function(e){o.handelSelectFile(e,n)})}}});

@@ -1,0 +1,1 @@
+define(function(require,exports,module){require("jquery");module.exports={init:function(){require("amazeUI")}}});

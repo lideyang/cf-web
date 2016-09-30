@@ -1,0 +1,1 @@
+define(function(require,exports,module){var $=require("jquery");require("amazeUI"),module.exports={init:function(){$("#explainTabs").tabs({noSwipe:1})}}});

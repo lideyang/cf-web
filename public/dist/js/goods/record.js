@@ -1,0 +1,1 @@
+define(function(require,exports,module){var $=require("jquery");module.exports={init:function(){require("amazeUI"),$("#accordion").on("click",".text-info",function(){$(this).parent().parent().next().collapse("toggle")})}}});

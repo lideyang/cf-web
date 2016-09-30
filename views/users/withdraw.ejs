@@ -1,0 +1,102 @@
+<link rel="stylesheet" href="/assets/dist/css/goods.css">
+<div class="am-g goods-header">
+  <!--header-->
+  <header data-am-widget="header" class="am-header am-header-default">
+    <div class="am-header-left am-header-nav">
+      <a href="javascript:history.go(-1)" class="">
+        <i class="am-header-icon am-icon-angle-left"></i>
+      </a>
+    </div>
+    <h1 class="am-header-title">
+      <a href="#title-link" class="">
+        <%= title.substring(title.indexOf('-') + 1, title.length) %>
+      </a>
+    </h1>
+  </header>
+</div>
+<form class="am-form am-form-horizontal user-recharge" action="/users/rechargeSuccess" id="withdrawForm">
+  <div class="am-g am-padding-vertical-xs" style="background-color:#fafafa">
+    <div class="am-u-sm-12 text-miss">
+      为了您的资金安全，提现只能提现至银行卡中
+    </div>
+  </div>
+  <div class="am-g am-padding-vertical-xs">
+    <div class="am-form-group">
+      <label for="moneyTxt" class="am-u-sm-6 am-form-label text-muted">提现金额</label>
+      <div class="am-u-sm-6">
+        <input id="moneyTxt" name="amt" type="text" class="am-text-right no-border" placeholder="请输入提现金额" required />
+        <input id="realMoney" name="amtB" type="hidden" />
+      </div>
+    </div>
+  </div>
+  <div class="am-g am-padding-vertical-xs" style="background-color:#fafafa">
+    <div class="am-u-sm-12 text-miss">
+      提现到
+    </div>
+  </div>
+  <div data-am-widget="list_news" class="am-list-news am-list-news-default other-pay-list">
+    <div class="am-list-news-bd">
+      <ul class="am-list" id="otherPayList">
+        <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left display-table">
+          <div class="am-u-sm-3 display-table-cell am-text-middle">
+            <img class="am-img-responsive" src="/assets/dist/images/bank/abc.png" alt=""/>
+          </div>
+          <div class=" am-u-sm-8 am-list-main display-table-cell am-text-middle">
+            <h3 class="am-list-item-hd">农业银行</h3>
+            <div class="am-list-item-text text-miss">尾号3228</div>
+          </div>
+          <div class="am-u-sm-1 am-list-thumb display-table-cell am-text-middle am-text-right">
+            <label class="am-checkbox">
+              <input type="radio" checked="checked" value="" name="address" data-am-ucheck>
+            </label>
+          </div>
+        </li>
+        <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left display-table">
+          <div class="am-u-sm-3 display-table-cell am-text-middle">
+            <img class="am-img-responsive" src="/assets/dist/images/bank/bon.png" alt=""/>
+          </div>
+          <div class=" am-u-sm-8 am-list-main display-table-cell am-text-middle">
+            <h3 class="am-list-item-hd">中国银行</h3>
+            <div class="am-list-item-text text-miss">尾号3228</div>
+          </div>
+          <div class="am-u-sm-1 am-list-thumb display-table-cell am-text-middle am-text-right">
+            <label class="am-checkbox">
+              <input type="radio" value="" name="address" data-am-ucheck disabled>
+            </label>
+          </div>
+        </li>
+        <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left display-table">
+          <div class="am-u-sm-3 display-table-cell am-text-middle">
+            <img class="am-img-responsive" src="/assets/dist/images/bank/ccb.png" alt=""/>
+          </div>
+          <div class=" am-u-sm-8 am-list-main display-table-cell am-text-middle">
+            <h3 class="am-list-item-hd">建设银行</h3>
+            <div class="am-list-item-text text-miss">尾号3228</div>
+          </div>
+          <div class="am-u-sm-1 am-list-thumb display-table-cell am-text-middle am-text-right">
+            <label class="am-checkbox">
+              <input type="radio" value="" name="address" data-am-ucheck>
+            </label>
+          </div>
+        </li>
+        <li class="am-list-item-desced am-g">
+          <div class="am-u-sm-12 am-text-center">
+              <a class="text-info" href="/users/addBankCard">+添加银行卡</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="am-g">
+      <div class="am-u-sm-10 am-u-sm-centered">
+        <button type="submit" href="#" class="am-btn am-btn-primary am-btn-block am-round">确认提现</button>
+      </div>
+    </div>
+  </div>
+</form>
+<% include footer %>
+<script>
+  seajs.use(['users/withdraw', 'tools'], function (main, tools) {
+    main.init();
+    tools.moneyFixInput('#moneyTxt');
+  })
+</script>

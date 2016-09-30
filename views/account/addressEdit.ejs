@@ -1,0 +1,38 @@
+<% include header %>
+<div class="am-g address-edit">
+  <div class="am-u-sm-11 am-u-sm-centered">
+    <form id="settingPwdForm" action="/index" class="am-form">
+        <input type="hidden" id="loginId" name="loginId" value="" />
+        <div class="am-form-group am-form-icon">
+            <i class="am-icon-user text-info"></i>
+            <i class="am-icon-name text-muted">收款人姓名</i>
+            <input id="loginPwd" name="password" type="text" class="am-form-field" placeholder="收款人姓名">
+      </div>
+      <div class="am-form-group am-form-icon">
+          <i class="am-icon-mobile-phone text-info"></i>
+          <i class="am-icon-name text-muted">手机号码</i>
+          <input id="loginPwd" name="password" type="text" class="am-form-field" placeholder="收款人手机号码">
+      </div>
+        <div class="am-form-group am-form-icon">
+            <i class="am-icon-institution text-info"></i>
+            <i class="am-icon-name text-muted">地区</i>
+            <input id="areaInput" name="password" type="text" class="am-form-field" style="background-color: #fff" placeholder="选择地区">
+        </div>
+        <div class="am-form-group am-form-icon">
+            <i class="am-icon-map-marker text-info"></i>
+            <i class="am-icon-name text-muted">详情地址</i>
+            <input id="loginPwd" name="password" type="text" class="am-form-field" placeholder="详情地址">
+        </div>
+      <div class="am-u-sm-12 am-u-sm-centered submit-group">
+            <button type="submit" class="am-btn am-btn-primary am-btn-block am-radius">保存</button>
+      </div>
+    </form>
+  </div>
+</div>
+<% include footer %>
+<script>
+    seajs.use(['account/addressEdit', 'tools'], function (main, tools) {
+    main.init();
+    tools.inputValueClear('input');
+  })
+</script>

@@ -1,0 +1,31 @@
+<!-- 底部开始 -->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default"
+	 id="">
+	<ul class="am-navbar-nav am-cf am-avg-sm-4">
+		<li >
+			<a href="/index" class="<% if(pageType=='home'){  %>active<% } %>">
+				<span class="am-icon-home"></span>
+			</a>
+		</li>
+		<li>
+			<a href="/sort/index" class="<% if(pageType=='sort'){  %>active<% } %>">
+				<span class="am-icon-th-large"></span>
+			</a>
+		</li>
+		<li>
+			<a href="/community/list" class="<% if(pageType=='community'){  %>active<% } %>">
+				<span class="am-icon-globe"></span>
+			</a>
+		</li>
+		<li >
+			<a href="/users/index" class="<% if(pageType=='users'){  %>active<% } %>">
+				<span class="am-icon-user"></span>
+			</a>
+		</li>
+	</ul>
+</div>
+<!--[if lt IE 9]>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="/assets/dist/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="/assets/dist/js/seajs/sea.js" id="seajsnode"></script>

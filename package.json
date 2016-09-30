@@ -1,0 +1,33 @@
+{
+  "name": "cf-web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "~2.4.1",
+    "express": "~4.13.4",
+    "express-partials":"latest",
+    "method-override":"latest",
+    "less-middleware": "1.0.x",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0",
+    "gulp": "^3.8.11",
+    "gulp-changed": "latest",
+    "gulp-less": "^3.0.0",
+    "gulp-minify-css": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-uglify": "latest",
+    "gulp-tinypng":"latest",
+    "gulp-watch":"latest",
+    "gulp-css-spriter":"latest",
+	"gulp-copy":"latest",
+    "supervisor":"latest",
+	"formidable":"latest"
+  }
+}

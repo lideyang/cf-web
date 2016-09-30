@@ -1,0 +1,49 @@
+﻿<% include header %>
+<style>
+	.account-header {
+		margin-bottom: 0px;
+	}
+</style>
+<div class="am-g address" id="addressContainer">
+	<% for (var i = 0; i < 3; i++) { %>
+	<div class="am-u-sm-7">
+		<h3>巅峰寂寞</h3>
+		<p>广东省韶关市武江区XX路XX号</p>
+	</div>
+	<div class="am-u-sm-5">
+		<h3>18888888888</h3>
+	</div>
+	<hr data-am-widget="divider" style="" class="am-divider am-divider-dashed"/>
+	<div class="am-u-sm-7">
+		<p>
+			<label class="am-checkbox" data-addr-id="<%= i %>">
+				<input type="radio" <% if(i == 0){ %>checked="checked"
+						<% } %>
+					   value="" name="address" data-am-ucheck>
+				设为收货地址
+			</label>
+		</p>
+	</div>
+	<div class="am-u-sm-5 am-text-right">
+		<a href="/account/addressEdit" class="am-badge am-badge-primary am-round">编辑</a>
+		<a class="am-badge am-badge-primary am-round del" data-addr-id="<%= i %>">删除</a>
+	</div>
+	<hr data-am-widget="divider" style="" class="am-divider am-divider-default"/>
+	<% } %>
+</div>
+<!--底部-->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default goods-detail-footer"
+	 style="background-color:#fafafa;border-top:1px solid #eaeaea" id="">
+	<div class="am-g">
+		<div class="am-u-sm-6 am-u-sm-centered">
+			<a href="/account/addressEdit" class="am-btn am-btn-primary am-round am-btn-smt" style="margin-bottom:4px">新增收货地址</a>
+		</div>
+	</div>
+</div>
+<% include footer %>
+<script>
+	seajs.use(['account/address', 'tools'], function (main, tools) {
+		main.init();
+
+	})
+</script>

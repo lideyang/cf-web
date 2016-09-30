@@ -1,0 +1,1 @@
+define(function(require,exports,module){var $=require("jquery");require("amazeUI"),module.exports={init:function(){var n=$("#navList").find(".dropdown");$(document).width();$("#navList").on("click",".dropdown",function(o){n.removeClass("am-active");var t=$(this).addClass("am-active").children(".dropdown-content");$("#secondNav").show().html(t.html())})}}});

@@ -1,0 +1,544 @@
+@import 'variables';
+
+.good-banner {
+    position: relative;
+    margin-bottom: 10px;
+
+    a.prev, h2 {
+        position: absolute;
+    }
+
+    a.prev {
+        top: 10px;
+        left: 10px;
+
+        i {
+            color: #fff;
+        }
+    }
+
+    h2 {
+        color: #fff;
+        top: 10px;
+        left: 50%;
+        margin: 0 0 0 -1.5em;
+        font-weight: normal;
+    }
+}
+
+.goods-detail {
+    margin-bottom: 15px;
+
+    h2 {
+        font-weight: bold;
+        margin: 0 0 10px;
+    }
+
+    .detail-info-list {
+        p {
+            margin: 3px 0;
+            font-size: 12px;
+
+            &.num {
+                font-size: 16px;
+                color: #000;
+            }
+        }
+    }
+}
+
+.goods-class {
+    a {
+        .badge;
+    }
+}
+/* 选择商品 */
+.goods-detail-tabs {
+    .am-list-static {
+        li {
+            &:first-child {
+                border-top: none;
+            }
+        }
+    }
+}
+
+.goods-detail-footer {
+    .am-navbar-nav {
+        li {
+            padding-bottom: 5px;
+
+            .submit {
+                border-radius: 20px;
+                height: 36px;
+                line-height: 36px !important;
+                padding: 0 3em;
+            }
+        }
+    }
+}
+
+.choose-goods-modal {
+    .am-list {
+        li {
+            a {
+                padding: .5em 0;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+.goods-title {
+    background-color: #fafafa;
+    height: 2em;
+    line-height: 2em;
+    margin-bottom: 15px;
+
+    h4 {
+        margin: 0;
+    }
+}
+
+.choose-game-list {
+    .am-gallery-item {
+        .am-gallery-title {
+            color: @global-miss;
+            margin-top: 5px;
+        }
+
+        .am-gallery-default {
+            margin-bottom: 10px;
+
+            i {
+                margin-right: 4px;
+                color: red;
+            }
+
+            color: red;
+        }
+    }
+}
+
+.choose-goods-info {
+    h3 {
+        padding-top: 5px;
+    }
+}
+/* 选择商品 */
+/* 选择游戏 */
+@import "chooseGoods";
+
+@import 'utility';
+
+.goods-order-detail {
+    h2 {
+        display: inline-block;
+    }
+
+    a.name {
+        .badge(14px;60px);
+        margin-left: 15px;
+    }
+}
+/* progress  */
+#progressContainer {
+    #nprogress {
+        overflow: hidden;
+        height: 5px;
+        margin: 20px 0;
+        background-color: #c7c7c7;
+        border-radius: 3px;
+
+        .nprogress-bar {
+            position: static;
+            height: 5px;
+            border-radius: 3px;
+            background-color: @global-primary;
+        }
+    }
+}
+
+.goods-order-detail-list {
+    li {
+        padding: 0;
+        line-height: 1.75em;
+
+        &.open, &.close {
+            color: #fff;
+        }
+
+        &.open {
+            background-color: @global-primary;
+        }
+
+        &.close {
+            background-color: @global-warning;
+        }
+
+        &.had {
+            border-bottom: 3px solid @global-warning;
+
+            i.icon-crown {
+                position: absolute;
+                top: 10px;
+                left: 0px;
+            }
+        }
+
+        img {
+        }
+
+        h3 {
+            margin: 3px 0 0;
+        }
+
+        p {
+            margin: 0 0 5px;
+        }
+    }
+}
+
+.goods-order-detail-modal {
+    background-color: #fff;
+
+    .am-close {
+        position: absolute;
+        left: 10px;
+        top: 7px;
+        font-size: 30px;
+    }
+
+    li {
+        p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+
+            &.range {
+                position: relative;
+                width: 50%;
+                line-height: 1;
+
+                input.amount {
+                    background-color: #f5f5f5;
+                    text-align: center;
+                    border: none;
+                    border-radius: 10px;
+                    width: 100%;
+                }
+
+                a.min, a.max {
+                    position: absolute;
+                    top: 0;
+                    font-size: 1.4rem;
+                    width: 32px;
+                    height: 21px;
+                }
+
+                a.min {
+                    left: 0;
+                    line-height: 10px;
+                }
+
+                a.max {
+                    right: 0;
+                }
+            }
+        }
+
+        button.submit {
+            margin: 10px 0 0;
+        }
+    }
+}
+
+.goods-order-pwd-modal {
+    .am-modal-actions-header {
+        position: relative;
+
+        .am-header-title {
+            font-size: 1.6rem;
+        }
+
+        .am-header-icon {
+            position: absolute;
+            left: 15px;
+            top: 2px;
+        }
+
+        .am-header-right {
+            top: 2px;
+            button{
+                background: none;
+                border: none;
+                margin-top: 10px;
+
+            }
+        }
+    }
+
+    .am-form-group.am-form-icon {
+        padding-bottom: 0;
+    }
+
+    .submit {
+        margin: 10px 0;
+    }
+}
+/* 领奖 */
+.award-progress {
+    height: 6px;
+    background: url(../images/split_link_bg.png) repeat-x;
+}
+
+.award-list {
+    margin-top: 0;
+    li{
+        padding: 0;
+    }
+    .choose-game-info {
+        margin: 10px 0;
+    }
+
+    .am-icon-map-marker {
+        font-size: 30px;
+    }
+
+    p, h3 {
+        margin: 0 0 0px;
+        padding-left: 5px;
+        padding-top: 0;
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
+    p {
+        &.range {
+            position: relative;
+            width: 50%;
+            line-height: 1;
+            padding: 0;
+
+            input.amount {
+                background-color: #f5f5f5;
+                text-align: center;
+                border: none;
+                border-radius: 10px;
+                width: 100%;
+            }
+
+            a.min, a.max {
+                position: absolute;
+                top: 0;
+                font-size: 1.4rem;
+                width: 32px;
+                height: 21px;
+                line-height: 20px;
+            }
+
+            a.min {
+                left: 0;
+                line-height: 16px;
+            }
+
+            a.max {
+                right: 0;
+            }
+        }
+    }
+}
+/* 付款方式 */
+.other-pay-list {
+    .am-list {
+        li {
+            line-height: 1.5em;
+            padding-left: 0;
+            padding-right: 0;
+
+            &:first-child {
+                border-top: none;
+            }
+        }
+    }
+}
+/* 参与记录 */
+.goods-record {
+    padding-left: 1em;
+
+    .am-img-thumbnail {
+        width: 80%;
+    }
+}
+
+.goods-record-list {
+    padding: 0 1em;
+    margin-bottom: 0;
+
+    li {
+    }
+}
+
+.goods-record-group {
+    .am-panel {
+        border: none;
+
+        .am-panel-hd {
+            background-color: #fff;
+        }
+
+        .am-panel-collapse {
+            background-color: #F0F0F0;
+
+            .am-panel-bd {
+                position: relative;
+                border-top: none;
+
+                .am-icon-caret-up {
+                    position: absolute;
+                    top: -20px;
+                    left: 15%;
+                    font-size: 20px;
+                    color: #F0F0F0;
+                }
+            }
+        }
+    }
+}
+
+/* 订单详情 */
+.order-detail{
+   .am-list{
+       li{
+           &.info{
+               padding: 1em 0;
+               &:last-child{
+                   border-bottom: none;
+               }
+           }
+       }
+   }
+}
+/* 充值 */
+.user-recharge{
+    .am-form-group{
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+}
+/* 幸运数字 */
+.lucky-detail{
+    padding-bottom: 20px;
+    p.title{
+        padding-top: 10px;
+        margin: 0 0 10px;
+        font-size: 16px;
+        i{
+            -webkit-text-size-adjust: none;
+            font-size: 10px;
+        }
+    }
+    .panel{
+        border:1px dashed #a1a1a1;
+        padding: 20px;
+        width: 100%;
+        hr{
+            margin: 1em 0;
+            border-color: #ccc;
+        }
+    }
+}
+.lucky{
+    .bg{
+        background-color: #fff;
+        padding: 0;
+        .arrow-up{
+            margin: -34px auto 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: @global-primary;
+        }
+        p{
+            margin: 0 0 5px;
+        }
+        .hint{
+            position: relative;
+            margin: 0 auto 15px;
+            width: 268px;
+            height: 82px;
+            img{
+                max-width: 100%;
+                position: absolute;
+                left:0;
+                top:0;
+            }
+            h1{
+                margin:0;
+                padding: 25px 0 0;
+            }
+        }
+        .lucky-list{
+            //border-top:1px dashed #eaeaea;
+            //border-bottom:1px dashed #eaeaea;
+            margin:0;
+            padding:0;
+            li{
+                margin-bottom: 5px;
+            }
+        }
+        .split-boxer{
+            .split-boxer();
+            margin: 5px 0;
+        }
+    }
+}
+/* 游戏筹 */
+.game-top-list{
+    .one{
+        li:first-child{
+            border-top: none;
+        }
+    }
+    .list-info{
+        padding-top: 0;
+        margin: 0;
+        &.am-list{
+            li{
+                padding: 10px 10px 10px 0;
+            }
+        }
+        .choose-game-info{
+            margin: 0;
+        }
+        .am-img-thumbnail{
+            width: 60px;
+            border-radius: 20px;
+            padding: 0;
+            border-width: 2px;
+            border-color: @global-primary;
+        }
+        h3{
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        i.num{
+            display: inline-block;
+            width: 30px;
+            text-align: right;
+            font-style: normal;
+        }
+        li.my{
+            background-color: #f5f5f5;
+            h3,span.money{
+                color:@global-primary;
+            }
+            span.money{
+                color:@global-primary;
+            }
+        }
+    }
+}

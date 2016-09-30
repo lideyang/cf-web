@@ -1,0 +1,1 @@
+!function($){function t(t,i){}$.fn.ForbidCopy=function(i){for(var o=0,n=this.length;o<n;o++){if($.data(this[o],"ForbidCopy"))return;new t(i,this[o]);$.data(this[o],"ForbidCopy",ScrollFloat)}return this}}(jQuery);

@@ -1,0 +1,141 @@
+@import "variables";
+
+.am-header-default {
+  background-color: @global-primary;
+}
+
+.communityTabs {
+  background-color: @global-primary;
+}
+
+.sort-list .sort-list-layer .am-tabs .am-tabs-nav.first {
+  padding: 1em 0;
+}
+
+.am-tabs {
+  .am-tabs-nav.first {
+    height: 90px;
+    li {
+      a {
+        border: none;
+        background: none;
+        color: #cacaca;
+      }
+      &.am-active {
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.community-list {
+  .am-panel {
+    box-shadow: none;
+    margin-top: 0 !important;
+    .am-panel-hd{
+      padding: 1.25em;
+      border:1px solid #eaeaea;
+    }
+    .am-panel-bd {
+      position: relative;
+      border: none !important;
+      h2 {
+        margin: 4px 0 0;
+      }
+      p {
+        margin: 2px 0 15px;
+      }
+      .time {
+        color: #000;
+        font-size: 12px;
+        padding: 0;
+        span {
+          display: inline-block;
+          width: 26px;
+          text-align: center;
+          font-size: 22px;
+        }
+      }
+      .am-u-sm-1 {
+        position: relative;
+        padding: 6px 0 0;
+        text-align: center;
+        .split {
+          position: absolute;
+          top: -20px;
+          left: 48%;
+          width: 1px;
+          height: 100%;
+          background-color: #f3f3f3;
+        }
+      }
+
+    }
+  }
+}
+/*帖子详情*/
+.community-detail-header{
+  position: relative;
+  z-index: 1;
+}
+.community-detail-banner{
+  position: relative;
+  margin-top:-49px;
+}
+.community-detail-header {
+  .am-header-default {
+    background: none;
+  }
+}
+
+.community-detail-content {
+  @import "chooseGoods";
+  padding: 0 1em;
+  h2 {
+    margin: 10px 0;
+  }
+  .info {
+    width: 100%;
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
+  .choose-goods-list {
+    padding: 20px 0;
+    li:first-child {
+      border-top: 1px solid #dedede;
+    }
+    h3 {
+      padding-top: 0;
+    }
+    .am-badge {
+      background: none;
+      border-width: 2px;
+      border-style: solid;
+    }
+  }
+}
+
+.community-detail-footer {
+  background-color: @global-primary;
+  .am-g {
+    li {
+      position: relative;
+      line-height: 1;
+      padding-top: 12px;
+      color: #fff;
+      span:before {
+        color: #fff;
+        font-size: 32px;
+      }
+      &.thumbs-up {
+        .am-icon-thumbs-up {
+          margin: -2px 5px 0 0;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

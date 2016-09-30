@@ -1,0 +1,136 @@
+<link rel="stylesheet" href="/assets/dist/css/user.css">
+<!--头部开始-->
+<div class="am-g">
+    <!--header-->
+    <header data-am-widget="header" class="am-header am-header-default">
+        <div class="am-header-left am-header-nav">
+            <a href="javascript:history.go(-1)" class="">
+                <i class="am-header-icon am-icon-angle-left"></i>
+            </a>
+        </div>
+        <h1 class="am-header-title">
+            <a href="#title-link" class="">
+                <%=title.substring(title.indexOf('-')+1,title.length)%>
+            </a>
+        </h1>
+    </header>
+</div>
+<div class="am-g user-detail">
+	<div class="am-container">
+		<!--列表-->
+		<ul class="am-list">
+			<li>
+				<a href="javascript:;;" id="headerBtn">
+                    <div class="am-g">
+                        <div class="am-u-sm-6">
+                            头像
+                        </div>
+                        <div class="am-u-sm-6 am-text-right" style="position:relative;">
+                            <img id="uploadPic" src="/assets/dist/images/panda.jpg" class="am-circle am-text-middle user-detail-header-img" width="38" height="38" />
+                            <input id="uploadInput" type="file" style="position:absolute;right:0px;top:0px;opacity:0;width:100%;height:100%;z-index: 9999" accept="image/*">
+                            <i class="am-icon-chevron-right text-miss am-text-middle"></i>
+                        </div>
+                    </div>
+                </a>
+			</li>
+            <li>
+                <a href="#">
+                    <div class="am-g">
+                        <div class="am-u-sm-6">
+                            账户名
+                        </div>
+                        <div class="am-u-sm-6 am-text-right text-miss">
+                            18888888888
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;;" id="nickNameBtn">
+                    <div class="am-g">
+                        <div class="am-u-sm-4">
+                            昵称
+                        </div>
+                        <div class="am-u-sm-8 am-text-right text-miss am-text-middle">
+                            账户名18888888888
+                            <i class="am-icon-chevron-right text-miss"></i>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/users/bindMobile">
+                    <div class="am-g">
+                        <div class="am-u-sm-6">
+                           绑定手机号
+                        </div>
+                        <div class="am-u-sm-6 am-text-right text-miss am-text-middle">
+                            <i class="am-icon-chevron-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/account/address">
+                    <div class="am-g">
+                        <div class="am-u-sm-6">
+                            收货管理地址
+                        </div>
+                        <div class="am-u-sm-6 am-text-right text-miss am-text-middle">
+                            <i class="am-icon-chevron-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </li>
+		</ul>
+	</div>
+</div>
+<!--头像-->
+<div class="am-modal-actions" id="headerModal">
+    <div class="am-modal-actions-group">
+        <ul class="am-list">
+            <li>
+                <a href="#">拍照</a>
+            </li>
+            <li>
+                <a href="#">相册选择</a>
+            </li>
+        </ul>
+    </div>
+    <div class="am-modal-actions-group">
+        <button class="am-btn am-btn-secondary am-btn-block" data-am-modal-close>取消</button>
+    </div>
+</div>
+<!--设置昵称-->
+<div class="am-modal-actions users-detail-nickname" id="nickNameModal">
+    <div class="am-modal-actions-group">
+        <form class="am-form" action="/users/nickname">
+            <ul class="am-list">
+                <li class="am-modal-actions-header text-muted am-text-center am-header">
+                    <div class="am-header-left am-header-nav" data-am-modal-close>
+                        <i id="backModalBtn" class="am-header-icon am-icon-angle-left"></i>
+                    </div>
+                    <h3 class="am-header-title">
+                        设置您的昵称
+                    </h3>
+                </li>
+                <li class="am-form">
+                    <div class="am-form-group am-form-icon">
+                        <i class="am-icon-user-secret text-info"></i>
+                        <input id="nickName" name="nickName" type="text" class="am-form-field" placeholder="请输入昵称" required maxlength="12" minlength="2" />
+                    </div>
+                </li>
+                <li class="">
+                    <button type="submit" id="" class="am-btn am-btn-block am-btn-primary am-round submit">确定</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+<% include footer %>
+<script>
+	seajs.use(['users/detail'], function (main) {
+		main.init();
+        main.upload('/api/upload');
+	})
+</script>

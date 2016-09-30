@@ -1,0 +1,1 @@
+define(function(require,exports,module){require("jquery");module.exports={init:function(){var t=require("tools"),e=t.eventsList(null,{api:"/api/tradeList",params:{start:0,type:"trade",count:10}});e.init(),document.addEventListener("touchmove",function(t){t.preventDefault()},!1)}}});

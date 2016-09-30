@@ -1,0 +1,46 @@
+
+<!--头部开始-->
+<div class="am-g account-header">
+    <!--header-->
+    <header data-am-widget="header" class="am-header am-header-default">
+        <div class="am-header-left am-header-nav">
+            <a href="javascript:history.go(-1)" class="">
+                <i class="am-header-icon am-icon-angle-left"></i>
+            </a>
+        </div>
+        <h1 class="am-header-title">
+            <a href="#title-link" class="">
+                <%=title.substring(title.indexOf('-')+1,title.length)%>
+            </a>
+        </h1>
+    </header>
+</div>
+<div class="am-g am-margin-top-sm">
+	<div class="am-u-sm-11 am-u-sm-centered">
+		<form id="forgetPwdForm" action="" class="am-form">
+			<div class="am-form-group am-form-icon">
+				<i class="am-icon-mobile-phone text-info"></i>
+				<input id="loginId" name="loginId" type="text" class="am-form-field" placeholder="请输入手机号">
+				<i class="am-icon-times-circle text-miss"></i>
+			</div>
+			<div class="am-form-group am-form-icon check-code">
+				<i class="am-icon-key text-info"></i>
+				<input id="checkCode" name="code" type="text" class="am-form-field" placeholder="请输入验证码">
+				<i class="am-icon-times-circle text-miss"></i>
+				<button id="checkCodeBtn" class="am-btn am-btn-primary am-radius am-btn-xs check-code-btn">获取验证码</button>
+			</div>
+			<div class="am-u-sm-11 am-u-sm-centered submit-group">
+				<button type="submit" class="am-btn am-btn-primary am-btn-block am-radius">确定</button>
+			</div>
+		</form>
+	</div>
+</div>
+<% include footer %>
+<script>
+    seajs.use(['users/bindMobile', 'tools'], function (main, tools) {
+        main.init();
+	    main.countDown();
+	    main.validator();
+		tools.inputValueClear('input');
+	})
+</script>

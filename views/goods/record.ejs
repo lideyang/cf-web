@@ -1,0 +1,118 @@
+<% include header %>
+<!--头部开始-->
+<div class="am-g am-g-collapse  choose-game-info goods-record">
+  <div class="am-u-sm-5">
+      <i class="am-icon-circle am-icon am-text-middle text-info"></i>
+    <img class="am-img-thumbnail am-radius" src="/assets/dist/images/goods_pic01.png" alt="info" />
+  </div>
+  <div class="am-u-sm-7">
+    <h3>商品名称</h3>
+    <p><i class="icon icon-z-gold-sm am-text-middle"></i><span class="text-miss am-text-middle">众筹价:6666.66元</span></p>
+  </div>
+</div>
+<ul class="am-list goods-order-detail-list goods-record-list">
+    <!--参与用户-->
+    <li>
+        <div class="am-g display-table">
+            <div class="am-u-sm-3 display-table-cell am-text-middle">
+                <img class="am-circle" src="/assets/dist/images/game1.png" alt="user">
+            </div>
+            <div class="am-u-sm-7 display-table-cell">
+                <h3>巅峰寂寞</h3>
+                <p class="text-miss">广东省深圳市 IP:192.168.0.1</p>
+                <p>2016-05-30 10:40:13</p>
+            </div>
+            <div class="am-u-sm-2 display-table-cell am-text-middle">
+                <span class="text-info">2</span>标
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="am-g am-g-collapse am-text-center">
+            <div class="am-u-sm-4 text-miss am-text-middle">
+                <i class="am-icon-circle am-icon text-info"></i>
+                幸运数字
+            </div>
+            <div class="am-u-sm-4 text-miss  am-text-middle">
+                <i class="am-icon-circle am-icon text-info"></i>
+                投标数
+            </div>
+            <div class="am-u-sm-4 text-miss am-text-middle">
+                <i class="am-icon-circle am-icon text-info"></i>
+                参与时间
+            </div>
+        </div>
+    </li>
+</ul>
+<!--幸运数字-->
+<div class="am-panel-group goods-record-group" id="accordion" >
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-hd">
+            <div class="am-g am-g-collapse am-text-center">
+                <div class="am-u-sm-4 text-info">
+                    查看幸运数字
+                </div>
+                <div class="am-u-sm-4">
+                    4
+                </div>
+                <div class="am-u-sm-4">
+                    2015-08-06
+                </div>
+            </div>
+        </div>
+        <div id="do-not-say-1" class="am-panel-collapse am-collapse">
+            <div class="am-panel-bd text-miss">
+                <i class="am-icon-caret-up"></i>
+           255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-hd">
+            <div class="am-g am-g-collapse am-text-center">
+                <div class="am-u-sm-4 text-info">
+                    查看幸运数字
+                </div>
+                <div class="am-u-sm-4">
+                    4
+                </div>
+                <div class="am-u-sm-4">
+                    2015-08-06
+                </div>
+            </div>
+        </div>
+        <div id="do-not-say-2" class="am-panel-collapse am-collapse">
+            <div class="am-panel-bd text-miss">
+                <i class="am-icon-caret-up"></i>
+                255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-hd">
+            <div class="am-g am-g-collapse am-text-center">
+                <div class="am-u-sm-4 text-info">
+                    查看幸运数字
+                </div>
+                <div class="am-u-sm-4">
+                    4
+                </div>
+                <div class="am-u-sm-4">
+                    2015-08-06
+                </div>
+            </div>
+        </div>
+        <div id="do-not-say-3" class="am-panel-collapse am-collapse">
+            <div class="am-panel-bd text-miss">
+                <i class="am-icon-caret-up"></i>
+                255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp; 255553&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</div>
+<% include footer %>
+<script>
+  seajs.use(['goods/record'], function (main) {
+    main.init();
+  })
+</script>

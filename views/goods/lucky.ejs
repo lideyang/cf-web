@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/assets/dist/css/goods.css">
+<style>
+	body{
+		background-color: #f0f0f0;
+	}
+</style>
+<!--头部开始-->
+<div class="am-g account-header">
+	<!--header-->
+	<header data-am-widget="header" class="am-header am-header-default">
+		<div class="am-header-left am-header-nav">
+			<a href="javascript:history.go(-1)" class="">
+				<i class="am-header-icon am-icon-angle-left"></i>
+			</a>
+		</div>
+		<h1 class="am-header-title">
+			<a href="#title-link" class="">
+				<%= title.substring(title.indexOf('-') + 1, title.length) %>
+			</a>
+		</h1>
+	</header>
+</div>
+<div class="am-container lucky">
+	<div class="bg">
+		<div class="arrow-up"></div>
+		<p class="am-padding-horizontal">参与商品名称与期数</p>
+		<div class="hint">
+			<img src="/assets/dist/images/lucky_bg.png"/>
+			<h1 class="am-text-center text-info">恭喜您中奖了</h1>
+		</div>
+		<div class="am-g am-g-collapse am-padding-horizontal-sm am-text-center">
+			<div class="am-u-sm-4">
+				<span class="text-miss">日期</span>
+				<p>2016-10-10</p>
+			</div>
+			<div class="am-u-sm-4">
+				<span class="text-miss">价格</span>
+				<p>￥333.12</p>
+			</div>
+			<div class="am-u-sm-4">
+				<span class="text-miss">标数</span>
+				<p>32</p>
+			</div>
+		</div>
+		<div class="split-boxer">
+			<div class="circle-left"></div>
+			<div class="circle-right"></div>
+		</div>
+		<ul class="am-avg-sm-5 am-text-center am-padding-horizontal-sm lucky-list">
+			<% for(var i = 0;i < 50;i++){ %>
+			<li class="text-miss"><%=Math.floor(Math.random()*100000+100000)%></li>
+			<% } %>
+		</ul>
+		<div class="split-boxer">
+			<div class="circle-left"></div>
+			<div class="circle-right"></div>
+		</div>
+		<div class="am-u-sm-6 am-u-sm-centered am-padding-vertical">
+			<a href="/goods/awardSuccess" class="am-btn am-btn-primary am-btn-block am-round">领取奖品</a>
+		</div>
+	</div>
+</div>

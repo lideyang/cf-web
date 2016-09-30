@@ -1,0 +1,43 @@
+/*分割线*/
+@import "variables";
+.divider-box(@bg-color:@global-primary,@mark-color:#fff,@width:8em){
+  height: 1px;
+  background-color: @bg-color;
+  text-align: center;
+  float:right;
+  width:100%;
+  h4{
+    margin: -.75em auto 0;
+    font-size: 14px;
+    width: @width;
+    font-weight: normal;
+    padding: 0 10px;
+    background-color: @mark-color;
+  }
+}
+.split-boxer(@bg-color:#f0f0f0){
+  border-top: 1px dashed #eaeaea;
+  position: relative;
+  .circle-left,.circle-right{
+    position: absolute;
+    width:12px;
+    height: 12px;
+    border-radius: 50%;
+    top:-6px;
+    background-color: @bg-color;
+  }
+  .circle-left{
+    left:-6px;
+  }
+  .circle-right{
+    right:-6px;
+  }
+}
+.badge(@radius:14px;@width:100%){
+    border-width:2px;
+    border-style:solid;
+    border-radius:@radius;
+    text-align: center;
+    width:@width;
+    display:inline-block;
+}

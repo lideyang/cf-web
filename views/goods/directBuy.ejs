@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="/assets/dist/css/goods.css">
+<!--头部开始-->
+<div class="am-g  goods-header">
+    <!--header-->
+    <header data-am-widget="header" class="am-header am-header-default">
+        <div class="am-header-left am-header-nav">
+            <a href="javascript:history.go(-1)" class="">
+                <i class="am-header-icon am-icon-angle-left"></i>
+            </a>
+        </div>
+        <h1 class="am-header-title">
+            <a href="#title-link" class="">
+                <%=title.substring(title.indexOf('-')+1,title.length)%>
+            </a>
+        </h1>
+        <div class="am-header-right am-header-nav">
+            <a id="tempLinkBtn" href="/users/temporaryBoxer?id=10005&name=xxx" class="">
+                暂存箱
+            </a>
+        </div>
+    </header>
+</div>
+<div class="award-progress">
+    <!--split-->
+</div>
+<!--头部开始-->
+<form action="/goods/otherPay" id="directBuyForm">
+    <div class="am-container">
+        <ul class="am-list am-list-static choose-goods-list award-list">
+            <li>
+                <a href="/account/address" style="padding: 10px 0">
+                    <div class="am-g am-g-collapse display-table choose-game-info">
+                        <div class="am-u-sm-1 display-table-cell am-text-middle">
+                            <i class="am-icon-map-marker am-text-middle text-info am-text-lg"></i>
+                        </div>
+                        <div class="am-u-sm-10 display-table-cell am-text-middle">
+                            <h3>商品名称</h3>
+                            <p class="text-miss">
+                                18888888888
+                            </p>
+                            <p class="text-miss">
+                                广东省韶关市武江区XX路XX号
+                            </p>
+                        </div>
+                        <div class="am-u-sm-1 display-table-cell am-text-middle am-text-right">
+                            <i class="am-icon-chevron-right am-text-middle am-text-right text-miss"></i>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/goods/detail">
+                    <div class="am-g am-g-collapse display-table choose-game-info">
+                        <div class="am-u-sm-5 display-table-cell am-text-middle">
+                            <i class="am-icon-circle am-text-middle text-info"></i>
+                            <img class="am-img-thumbnail am-radius" src="/assets/dist/images/goods_pic01.png" alt="info" />
+                        </div>
+                        <div class="am-u-sm-7 display-table-cell am-text-middle">
+                            <h3>商品名称</h3>
+                            <p>
+                                <span class="text-info am-text-middle">众筹产品</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <div class="am-g am-g-collapse choose-game-info">
+                    <div class="am-u-sm-3">
+                        购买数量
+                    </div>
+                    <div class="am-u-sm-9">
+                        <p class="range am-center am-fr" id="rangeBoxer">
+                            <input class="amount" type="text" id="comfirmAmount" name="amount" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" value="1" />
+                            <a href="javascript:;;" class="am-badge am-badge-primary am-round min">-</a>
+                            <a href="javascript:;;" class="am-badge am-badge-primary am-round max">+</a>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--底部-->
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default goods-detail-footer" id="">
+        <div class="award-progress">
+            <!--split-->
+        </div>
+        <ul class="am-navbar-nav am-cf am-avg-sm-3" style="background-color:#fafafa">
+            <li class="">
+                <button id="orderCommitBtn" type="submit" class="am-btn am-btn-primary am-btn-sm am-vertical-align-middle submit" style="margin-bottom:10px">购买￥<span id="amountMoneyTxt">6666.00</span></button>
+            </li>
+        </ul>
+    </div>
+</form>
+
+<% include footer %>
+<script>
+    seajs.use(['goods/directBuy', 'tools'], function (main, tools) {
+        main.init();
+        tools.inputValueClear('input');
+        tools.rangeInput('6666', '1', '5');
+    })
+</script>

@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/assets/dist/css/account.css">
+<div class="am-g">
+  <!-- login -->
+  <div class="am-u-sm-8 am-u-sm-centered login-header">
+      <div class="login-header-layer">
+        <div class="login-header-inner">
+          <img src="/assets/dist/images/login.png" alt="login" />
+          <span class="text-info">众筹新玩法</span>
+        </div>
+      </div>
+  </div>
+  <div class="am-u-sm-10 am-u-sm-centered login-container">
+    <!--登录表单-->
+    <form id="loginForm" action="" class="am-form" method="post">
+      <div class="am-form-group am-form-icon">
+        <i class="am-icon-user text-info"></i>
+        <input id="loginId" name="loginId" type="text" class="am-form-field" placeholder="请输入登录账号" required>
+        <i class="am-icon-times-circle text-miss"></i>
+      </div>
+      <div class="am-form-group am-form-icon">
+        <i class="am-icon-lock text-info"></i>
+        <input id="loginPwd" name="password" type="password" class="am-form-field" placeholder="请输入登录密码" required pattern="^\d{6}$">
+        <i class="am-icon-times-circle text-miss"></i>
+      </div>
+      <div class="submit-group">
+        <button type="submit" class="am-btn am-btn-primary am-btn-block am-radius">登录</button>
+      </div>
+    </form>
+    <!--忘记密码-->
+    <div class="am-cf forget-pwd">
+      <a href="/account/mobileLogin" class="text-miss am-fl">手机号登录</a>
+      <a href="/account/forgetPwd" class="text-miss am-fr">忘记密码</a>
+    </div>
+    <div class="divider text-miss">
+        <h4>其他登录方式</h4>
+    </div>
+    <div class="am-u-sm-8 am-u-sm-centered other-login">
+      <a class="am-btn am-btn-primary am-btn-xs am-radius" href="#">
+        <i class="am-icon-weixin"></i>
+      </a>
+      <a class="am-btn am-btn-primary am-btn-xs am-radius" href="#">
+        <i class="am-icon-qq"></i>
+      </a>
+    </div>
+  </div>
+</div>
+<% include footer %>
+<script>
+  seajs.use(['account/login','tools'], function (main,tools) {
+    main.init();
+    main.validator();
+    tools.inputValueClear('input');
+  })
+</script>

@@ -1,0 +1,1 @@
+define(function(require,exports,module){var $=require("jquery");module.exports={init:function(){$("#tempLinkBtn").on("click",function(){var n=$(this),t=n.attr("href");n.attr("href",t+"&num="+$("#comfirmAmount").val())})}}});

@@ -1,0 +1,30 @@
+<% include header %>
+<div class="am-g">
+  <div class="am-u-sm-11 am-u-sm-centered">
+    <form id="settingPwdForm" action="/index" class="am-form">
+        <input type="hidden" id="loginId" name="loginId" value="" />
+      <div class="am-form-group am-form-icon">
+        <i class="am-icon-lock text-info"></i>
+        <input id="loginPwd" name="password" type="password" class="am-form-field" placeholder="请输入登录密码">
+        <i class="am-icon-times-circle text-miss"></i>
+      </div>
+      <div class="am-form-group am-form-icon">
+        <i class="am-icon-unlock-alt text-info"></i>
+        <input id="reLoginPwd" type="password" name="repassword" class="am-form-field" placeholder="请再次输入登录密码">
+        <i class="am-icon-times-circle text-miss"></i>
+      </div>
+      <div class="am-u-sm-11 am-u-sm-centered submit-group">
+        <button type="submit" class="am-btn am-btn-primary am-btn-block am-radius">确定</button>
+      </div>
+    </form>
+  </div>
+</div>
+<% include footer %>
+<script>
+    var publicKey = '';
+  seajs.use(['account/settingPwd','tools'], function (main,tools) {
+    main.settingPwd();
+    main.settingPayPwd();
+    tools.inputValueClear('input');
+  })
+</script>

@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="/assets/dist/css/user.css">
+<!--头部开始-->
+<div class="am-g goods-header">
+  <!--header-->
+  <header data-am-widget="header" class="am-header am-header-default">
+    <div class="am-header-left am-header-nav">
+      <a href="javascript:history.go(-1)" class="">
+        <i class="am-header-icon am-icon-angle-left"></i>
+      </a>
+    </div>
+    <h1 class="am-header-title">
+      <a href="#title-link" class="">
+        <%=title.substring(title.indexOf('-')+1,title.length)%>
+      </a>
+    </h1>
+  </header>
+</div>
+<div class="my-bid my-order">
+  <div class="am-container">
+    <ul class="am-list">
+      <li>
+        <a href="/users/orderDetail">
+          <div class="am-g am-g-collapse display-table">
+            <div class="am-u-sm-4 display-table-cell am-text-middle">
+              <i class="am-icon-circle am-text-middle text-info"></i>
+              <img class="" src="/assets/dist/images/goods_pic01.png" alt="user" />
+            </div>
+            <div class="am-u-sm-7 am-text-middle display-table-cell">
+              <h3>商品名称</h3>
+              <p>价格：<span class="text-info">￥120.00</span></p>
+            </div>
+            <div class="am-u-sm-1 display-table-cell am-text-middle">
+              <span class="am-badge am-badge-primary am-round">待收货</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/users/orderDetail">
+          <div class="am-g am-g-collapse display-table">
+            <div class="am-u-sm-4 display-table-cell am-text-middle">
+              <i class="am-icon-circle am-text-middle text-info"></i>
+              <img class="" src="/assets/dist/images/goods_pic01.png" alt="user" />
+            </div>
+            <div class="am-u-sm-7 am-text-middle display-table-cell">
+              <h3>商品名称</h3>
+              <p>价格：<span class="text-info">￥120.00</span></p>
+            </div>
+            <div class="am-u-sm-1 display-table-cell am-text-middle">
+              <span class="am-badge am-badge-primary am-round">待收货</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/users/orderDetail">
+          <div class="am-g am-g-collapse display-table">
+            <div class="am-u-sm-4 display-table-cell am-text-middle">
+              <i class="am-icon-circle am-text-middle text-info"></i>
+              <img class="" src="/assets/dist/images/goods_pic01.png" alt="user" />
+            </div>
+            <div class="am-u-sm-7 am-text-middle display-table-cell">
+              <h3>商品名称</h3>
+              <p>价格：<span class="text-info">￥120.00</span></p>
+            </div>
+            <div class="am-u-sm-1 display-table-cell am-text-middle">
+              <span class="am-badge am-badge-primary am-round">待收货</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/users/orderDetail">
+          <div class="am-g am-g-collapse display-table">
+            <div class="am-u-sm-4 display-table-cell am-text-middle">
+              <i class="am-icon-circle am-text-middle text-info"></i>
+              <img class="" src="/assets/dist/images/goods_pic01.png" alt="user" />
+            </div>
+            <div class="am-u-sm-7 am-text-middle display-table-cell">
+              <h3>商品名称</h3>
+              <p>价格：<span class="text-info">￥120.00</span></p>
+            </div>
+            <div class="am-u-sm-1 display-table-cell am-text-middle">
+              <span class="am-badge am-badge-primary am-round">待收货</span>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<% include footer %>
+<script>
+  seajs.use(['users/myOrder', 'tools'], function (main, tools) {
+    main.init();
+    tools.timer('.count-down');
+  })
+</script>

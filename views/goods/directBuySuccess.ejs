@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/assets/dist/css/goods.css">
+<style>
+    body{
+        background-color:#FAFAFA;
+    }
+</style>
+<!--头部开始-->
+<div class="am-g  goods-header">
+    <!--header-->
+    <header data-am-widget="header" class="am-header am-header-default">
+        <h1 class="am-header-title">
+            <a href="#title-link" class="">
+                <%=title.substring(title.indexOf('-')+1,title.length)%>
+            </a>
+        </h1>
+    </header>
+</div>
+<div class="am-g">
+    <div class="am-u-sm-6 am-u-sm-centered am-margin-top-lg">
+        <img class="am-img-responsive" src="/assets/dist/images/directbuy_success.png" alt="logo" />
+    </div>
+    <h2 class="am-text-center">购买成功！</h2>
+    <p class="am-text-center text-miss">我们将尽快和您联系</p>
+    <div class="am-u-sm-10 am-u-sm-centered am-margin-bottom-sm">
+        <a href="#" class="am-btn am-btn-primary am-btn-block am-round">查到订单</a>
+    </div>
+    <div class="am-u-sm-10 am-u-sm-centered">
+        <a href="/index" class="am-btn am-btn-primary am-btn-block am-round">返回首页</a>
+    </div>
+</div>
+<% include footer %>
+<script>
+
+</script>

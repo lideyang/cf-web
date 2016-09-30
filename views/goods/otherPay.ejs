@@ -1,0 +1,105 @@
+﻿<link rel="stylesheet" href="/assets/dist/css/goods.css">
+<div class="am-g goods-header">
+    <!--header-->
+    <header data-am-widget="header" class="am-header am-header-default">
+        <div class="am-header-left am-header-nav">
+            <a href="javascript:history.go(-1)" class="">
+                <i class="am-header-icon am-icon-angle-left"></i>
+            </a>
+        </div>
+        <h1 class="am-header-title">
+            <a href="#title-link" class="">
+                <%=title.substring(title.indexOf('-')+1,title.length)%>
+            </a>
+        </h1>
+    </header>
+</div>
+<div class="am-g am-padding-vertical">
+    <div class="am-u-sm-6">
+        支付金额
+    </div>
+    <div class="am-u-sm-6 text-info am-text-right">
+        ￥250.00
+    </div>
+</div>
+<div class="am-g am-padding-vertical-xs" style="background-color:#fafafa">
+    <div class="am-u-sm-12 text-miss">
+        支付方式
+    </div>
+</div>
+<div data-am-widget="list_news" class="am-list-news am-list-news-default other-pay-list">
+    <form class="am-form" action="/goods/directBuySuccess">
+        <div class="am-list-news-bd">
+            <ul class="am-list" id="otherPayList">
+                <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left display-table">
+                    <div class="am-u-sm-3 display-table-cell am-text-middle">
+                        <img class="am-img-responsive" src="/assets/dist/images/otherpay01.png" alt="" />
+                    </div>
+                    <div class=" am-u-sm-8 am-list-main display-table-cell am-text-middle">
+                        <h3 class="am-list-item-hd">余额支付</h3>
+                        <div class="am-list-item-text">推荐未安装app用户使用</div>
+                    </div>
+                    <div class="am-u-sm-1 am-list-thumb display-table-cell am-text-middle am-text-right">
+                        <label class="am-checkbox">
+                            <input type="radio" checked="checked" value="" name="address" data-am-ucheck>
+                        </label>
+                    </div>
+                </li>
+                <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left display-table">
+                    <div class="am-u-sm-3 display-table-cell am-text-middle">
+                        <img class="am-img-responsive" src="/assets/dist/images/otherpay02.png" alt="" />
+                    </div>
+                    <div class=" am-u-sm-8 am-list-main display-table-cell am-text-middle">
+                        <h3 class="am-list-item-hd">微信支付</h3>
+                        <div class="am-list-item-text">推荐安装微信用户使用</div>
+                    </div>
+                    <div class="am-u-sm-1 am-list-thumb display-table-cell am-text-middle am-text-right">
+                        <label class="am-checkbox">
+                            <input type="radio" value="" name="address" data-am-ucheck disabled>
+                        </label>
+                    </div>
+                </li>
+                <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left display-table">
+                    <div class="am-u-sm-3 display-table-cell am-text-middle">
+                        <img class="am-img-responsive" src="/assets/dist/images/otherpay03.png" alt="" />
+                    </div>
+                    <div class=" am-u-sm-8 am-list-main display-table-cell am-text-middle">
+                        <h3 class="am-list-item-hd">支付宝</h3>
+                        <div class="am-list-item-text">推荐安装支付宝用户使用</div>
+                    </div>
+                    <div class="am-u-sm-1 am-list-thumb display-table-cell am-text-middle am-text-right">
+                        <label class="am-checkbox">
+                            <input type="radio" value="" name="address" data-am-ucheck>
+                        </label>
+                    </div>
+                </li>
+                <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left display-table">
+                    <div class="am-u-sm-3 display-table-cell am-text-middle">
+                        <img class="am-img-responsive" src="/assets/dist/images/otherpay04.png" alt="" />
+                    </div>
+                    <div class=" am-u-sm-8 am-list-main display-table-cell am-text-middle">
+                        <h3 class="am-list-item-hd">康美钱包</h3>
+                        <div class="am-list-item-text">推荐安装康美钱包用户使用</div>
+                    </div>
+                    <div class="am-u-sm-1 am-list-thumb display-table-cell am-text-middle am-text-right">
+                        <label class="am-checkbox">
+                            <input type="radio" value="" name="address" data-am-ucheck>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="am-g">
+            <div class="am-u-sm-10 am-u-sm-centered">
+                <button type="submit" href="#" class="am-btn am-btn-primary am-btn-block am-round">确认支付</button>
+            </div>
+        </div>
+    </form>
+</div>
+<% include footer %>
+<script>
+    seajs.use(['goods/otherPay', 'tools'], function (main, tools) {
+        main.init();
+        tools.inputValueClear('input');
+    })
+</script>

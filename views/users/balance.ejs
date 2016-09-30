@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/assets/dist/css/user.css">
+<style>
+    body{
+        background-color:#fafafa;
+    }
+</style>
+<!--头部开始-->
+<div class="am-g  goods-header">
+    <!--header-->
+    <header data-am-widget="header" class="am-header am-header-default">
+        <div class="am-header-left am-header-nav">
+            <a href="javascript:history.go(-1)" class="">
+                <i class="am-header-icon am-icon-angle-left"></i>
+            </a>
+        </div>
+        <h1 class="am-header-title">
+            <a href="#title-link" class="">
+                <%=title.substring(title.indexOf('-')+1,title.length)%>
+            </a>
+        </h1>
+        <div class="am-header-right am-header-nav">
+            <a href="/users/tradeRecord" class="">
+                交易记录
+            </a>
+        </div>
+    </header>
+</div>
+<div class="am-g balance">
+    <div class="am-u-sm-6 am-u-sm-centered am-margin-top-lg">
+        <img class="am-img-responsive" src="/assets/dist/images/balance_bg.png" alt="logo" />
+    </div>
+    <p class="am-text-center text-muted">当前余额</p>
+    <h2 class="am-text-center text-info">￥518.00</h2>
+    <div class="am-u-sm-10 am-u-sm-centered am-margin-bottom-sm">
+        <a href="/users/recharge" class="am-btn am-btn-primary am-btn-block am-round">充值</a>
+    </div>
+    <div class="am-u-sm-10 am-u-sm-centered">
+        <a href="/users/withdraw" class="am-btn am-btn-primary am-btn-block am-round">提现</a>
+    </div>
+</div>
+<% include footer %>
+<script>
+
+</script>

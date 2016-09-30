@@ -1,0 +1,31 @@
+<% include header %>
+<div class="am-g user-setting-list">
+	<div class="am-container">
+		<ul class="am-list am-list-static">
+			<li>
+				<a href="/account/settingPwd" class="">
+					<i class="am-icon-lock am-icon-fw text-info am-text-middle"></i>
+					<span class="am-text-middle">设置登录密码</span>
+					<i class="am-icon-chevron-right text-miss am-fr am-text-middle"></i>
+				</a>
+			</li>
+			<li>
+				<a href="/account/settingPwd">
+					<i class="am-icon-lock am-icon-fw text-info am-text-middle"></i>
+					<span class="am-text-middle">设置登录密码</span>
+					<i class="am-icon-chevron-right text-miss am-fr am-text-middle"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="am-container">
+	<a href="/account/mobileLogin" class="am-btn am-btn-primary am-btn-block am-radius">退出登录</a>
+</div>
+<% include ../footer %>
+
+<script>
+	seajs.use(['users/setting'], function (main) {
+		main.init();
+	})
+</script>

@@ -1,0 +1,198 @@
+<% include header %>
+<div class="am-g am-g-collapse sort-list">
+	<div class="am-u-sm-12 am-u-sm-centered sort-list-layer">
+		<div class="am-tabs" id="sortList" data-am-tabs="{noSwipe: 1}">
+			<ul class="am-tabs-nav am-nav am-nav-pills am-nav-justify first">
+				<li><a href="javascript: void(0)">全部<span>ALL</span></a></li>
+				<li class="am-active"><a href="javascript: void(0)">普通筹<span>Ordinary</span></a></li>
+				<li><a href="javascript: void(0)">游戏筹<span>Game</span></a></li>
+				<li><a href="javascript: void(0)">直购<span>Buy</span></a></li>
+			</ul>
+			<!--二级菜单-->
+			<div class="am-tabs-bd" style=" background-color:#f8f8f8;" id="sortSecondList">
+				<div data-tab-panel-0 class="am-tab-panel">
+					<div class="am-tabs sort-second" data-am-tabs="{noSwipe: 1}">
+						<ul class="am-nav am-tabs-nav am-nav-pills am-nav-justify">
+							<li class="am-active"><a class="" href="javascript: void(0)">商品列表</a></li>
+							<li><a class="" href="javascript: void(0)">游戏列表</a></li>
+						</ul>
+						<div class="am-tabs-bd">
+							<div data-tab-panel-0 class="am-tab-panel am-active">
+								<ul class="am-list am-list-static">
+									<% sortList.forEach(function(item, index){ %>
+									<li class="list" data-sortid="index" data-url="/goods/detail">
+										<div class="am-g am-g-collapse">
+											<div class="am-u-sm-2 am-text-center">
+												<img src="/assets/dist/images/sort_list0<%= index + 1 %>.png"/>
+											</div>
+											<div class="am-u-sm-10">
+												<%= item.name %>
+											</div>
+										</div>
+									</li>
+									<% }) %>
+								</ul>
+							</div>
+							<div data-tab-panel-1 class="am-tab-panel">
+								<ul class="am-list am-list-static goods-game-sort">
+									<% sortList.forEach(function(item, index){ %>
+									<li data-sortid="index" data-url="/goods/detail">
+										<a href="/goods/chooseGoods">
+											<div class="am-g">
+												<div class="am-u-sm-2 am-text-center">
+													<img src="/assets/dist/images/game<%= index % 2 + 1 %>.png"/>
+												</div>
+												<div class="am-u-sm-10">
+													<p class="am-margin-top-sm am-margin-bottom-0 am-padding-left-xs"><%= item.name %></p>
+													<p class="text-danger am-margin-vertical-xs am-padding-left-xs">
+														<i class="am-icon-fire am-margin-right-xs"></i>2373333
+													</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<% }) %>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-tab-panel-1 class="am-tab-panel am-active">
+					<div class="am-tabs sort-second" data-am-tabs="{noSwipe: 1}">
+						<ul class="am-nav am-tabs-nav am-nav-pills am-nav-justify">
+							<li class="am-active"><a class="" href="javascript: void(0)">商品列表</a></li>
+							<li><a href="javascript: void(0)">玩法介绍</a></li>
+						</ul>
+						<div class="am-tabs-bd">
+							<div data-tab-panel-0 class="am-tab-panel am-active">
+								<ul class="am-list am-list-static">
+									<% sortList.forEach(function(item, index){ %>
+									<li class="list" data-sortid="index" data-url="/goods/detail">
+										<div class="am-g am-g-collapse">
+											<div class="am-u-sm-2 am-text-center">
+												<img src="/assets/dist/images/sort_list0<%= index + 1 %>.png"/>
+											</div>
+											<div class="am-u-sm-10">
+												<%= item.name %>
+											</div>
+										</div>
+									</li>
+									<% }) %>
+								</ul>
+							</div>
+							<div data-tab-panel-1 class="am-tab-panel">
+								<div class="am-container">
+									<p class="info-title">玩法介绍：</p>
+									玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍
+									玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-tab-panel-3 class="am-tab-panel">
+					<div class="am-tabs sort-second" data-am-tabs="{noSwipe: 1}">
+						<ul class="am-nav am-tabs-nav am-nav-pills am-nav-justify">
+							<li class="am-active"><a class="" href="javascript: void(0)">商品列表</a></li>
+							<li class=""><a class="" href="javascript: void(0)">游戏列表</a></li>
+							<li><a href="javascript: void(0)">玩法介绍</a></li>
+						</ul>
+						<div class="am-tabs-bd">
+							<div data-tab-panel-0 class="am-tab-panel am-active">
+								<ul class="am-list am-list-static">
+									<% sortList.forEach(function(item, index){ %>
+									<li class="list" data-sortid="index" data-url="/goods/detail">
+										<div class="am-g am-g-collapse">
+											<div class="am-u-sm-2 am-text-center">
+												<img src="/assets/dist/images/sort_list0<%= index + 1 %>.png"/>
+											</div>
+											<div class="am-u-sm-10">
+												<%= item.name %>
+											</div>
+										</div>
+									</li>
+									<% }) %>
+								</ul>
+							</div>
+							<div data-tab-panel-1 class="am-tab-panel">
+								<ul class="am-list am-list-static goods-game-sort">
+									<% sortList.forEach(function(item, index){ %>
+									<li data-sortid="index" data-url="/goods/detail">
+										<a href="/goods/chooseGoods">
+											<div class="am-g">
+												<div class="am-u-sm-2 am-text-center">
+													<img src="/assets/dist/images/game<%= index % 2 + 1 %>.png"/>
+												</div>
+												<div class="am-u-sm-10">
+													<p class="am-margin-top-sm am-margin-bottom-0 am-padding-left-xs"><%= item.name %></p>
+													<p class="text-danger am-margin-vertical-xs am-padding-left-xs">
+														<i class="am-icon-fire am-margin-right-xs"></i>2373333
+													</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<% }) %>
+								</ul>
+							</div>
+							<div data-tab-panel-2 class="am-tab-panel">
+								<div class="am-container">
+									<p class="info-title">玩法介绍：</p>
+									玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍
+									玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍玩法介绍
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-tab-panel-4 class="am-tab-panel">
+					<div class="am-tabs sort-second" data-am-tabs="{noSwipe: 1}">
+						<ul class="am-nav am-tabs-nav am-nav-pills am-nav-justify">
+							<li class="am-active"><a class="" href="javascript: void(0)">商品列表</a></li>
+							<li><a href="javascript: void(0)">直购说明</a></li>
+						</ul>
+						<div class="am-tabs-bd">
+							<div data-tab-panel-0 class="am-tab-panel am-active">
+								<ul class="am-list am-list-static">
+									<% sortList.forEach(function(item, index){ %>
+										<li class="list" data-sortid="index" data-url="/goods/detail">
+											<div class="am-g am-g-collapse">
+												<div class="am-u-sm-2 am-text-center">
+													<img src="/assets/dist/images/sort_list0<%= index + 1 %>.png"/>
+												</div>
+												<div class="am-u-sm-10">
+													<%= item.name %>
+												</div>
+											</div>
+										</li>
+									<% }) %>
+								</ul>
+							</div>
+							<div data-tab-panel-1 class="am-tab-panel">
+								<div class="am-container">
+									<p class="info-title">直购说明：</p>
+									直购说明直购说明直购说明直购说明直购说明直购说明直购说明直购说明直购说明直购说明直购说明
+									直购说明直购说明直购说明直购说明直购说明直购说明
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 侧边栏 -->
+	<div id="sortGoodsList" class="am-offcanvas sort-goods-list">
+		<div class="am-offcanvas-bar am-offcanvas-bar-flip">
+			<!-- 你的内容 -->
+		</div>
+	</div>
+</div>
+
+<% include ../footer %>
+
+<script>
+	seajs.use(['sort/index'], function (main) {
+		main.init();
+	})
+</script>

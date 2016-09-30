@@ -1,0 +1,106 @@
+<% include header %>
+<!--头部开始-->
+<div class="am-g choose-game-info">
+  <div class="am-u-sm-4">
+    <img class="am-img-thumbnail am-radius" src="/assets/dist/images/goods_pic01.png" alt="info" />
+  </div>
+  <div class="am-u-sm-8">
+    <h3>商品名称</h3>
+    <p><i class="icon icon-z-gold-sm am-text-middle"></i><span class="text-miss am-text-middle">众筹价:6666.66元</span></p>
+  </div>
+</div>
+<div class="goods-title">
+    <div class="am-u-sm-12">
+        <h4 class="text-miss">可选择的游戏</h4>
+    </div>
+</div>
+<ul data-am-widget="gallery" class="am-gallery am-avg-sm-3 am-gallery-default game-list am-text-center choose-game-list" data-am-gallery="{ pureview: true }">
+    <li>
+        <div class="am-gallery-item">
+            <a href="/assets/dist/images/recommend_banner.png" class="">
+                <img src="/assets/dist/images/game1.png" alt="僵尸植物" />
+                <h3 class="am-gallery-title">僵尸植物</h3>
+                <div class="am-gallery-default"><i class="am-icon-fire"></i>2373333</div>
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="am-gallery-item">
+            <a href="/assets/dist/images/recommend_banner.png" class="">
+                <img src="/assets/dist/images/game2.png" alt="萝卜保卫" />
+                <h3 class="am-gallery-title">萝卜保卫</h3>
+                <div class="am-gallery-default"><i class="am-icon-fire"></i>2373333</div>
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="am-gallery-item">
+            <a href="/assets/dist/images/recommend_banner.png" class="">
+                <img src="/assets/dist/images/game2.png" alt="萝卜保卫" />
+                <h3 class="am-gallery-title">萝卜保卫</h3>
+                <div class="am-gallery-default"><i class="am-icon-fire"></i>2373333</div>
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="am-gallery-item">
+            <a href="/assets/dist/images/recommend_banner.png" class="">
+                <img src="/assets/dist/images/game1.png" alt="僵尸植物" />
+                <h3 class="am-gallery-title">僵尸植物</h3>
+                <div class="am-gallery-default"><i class="am-icon-fire"></i>2373333</div>
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="am-gallery-item">
+            <a href="/assets/dist/images/recommend_banner.png" class="">
+                <img src="/assets/dist/images/game2.png" alt="萝卜保卫" />
+                <h3 class="am-gallery-title">萝卜保卫</h3>
+                <div class="am-gallery-default"><i class="am-icon-fire"></i>2373333</div>
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="am-gallery-item">
+            <a href="/assets/dist/images/recommend_banner.png" class="">
+                <img src="/assets/dist/images/game1.png" alt="僵尸植物" />
+                <h3 class="am-gallery-title">僵尸植物</h3>
+                <div class="am-gallery-default"><i class="am-icon-fire"></i>2373333</div>
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="am-gallery-item">
+            <a href="/assets/dist/images/recommend_banner.png" class="">
+                <img src="/assets/dist/images/game2.png" alt="萝卜保卫" />
+                <h3 class="am-gallery-title">萝卜保卫</h3>
+                <div class="am-gallery-default"><i class="am-icon-fire"></i>2373333</div>
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="am-gallery-item">
+            <a href="/assets/dist/images/recommend_banner.png" class="">
+                <img src="/assets/dist/images/game1.png" alt="僵尸植物" />
+                <h3 class="am-gallery-title">僵尸植物</h3>
+                <div class="am-gallery-default"><i class="am-icon-fire"></i>2373333</div>
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="am-gallery-item">
+            <a href="/assets/dist/images/recommend_banner.png" class="">
+                <img src="/assets/dist/images/game2.png" alt="萝卜保卫" />
+                <h3 class="am-gallery-title">萝卜保卫</h3>
+                <div class="am-gallery-default"><i class="am-icon-fire"></i>2373333</div>
+            </a>
+        </div>
+    </li>
+</ul>
+<% include footer %>
+<script>
+  seajs.use(['goods/chooseGame', 'tools'], function (main, tools) {
+    main.init();
+    tools.inputValueClear('input');
+  })
+</script>

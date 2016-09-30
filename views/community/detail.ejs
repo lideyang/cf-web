@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="/assets/dist/css/community.css">
+<!--头部开始-->
+<div class="am-g community-detail-header">
+  <!--header-->
+  <header data-am-widget="header" class="am-header am-header-default">
+    <div class="am-header-left am-header-nav">
+      <a href="javascript:history.go(-1)" class="">
+        <i class="am-header-icon am-icon-angle-left"></i>
+      </a>
+    </div>
+    <h1 class="am-header-title">
+      <a href="#title-link" class="">
+        <%=title.substring(title.indexOf('-')+1,title.length)%>
+      </a>
+    </h1>
+  </header>
+</div>
+<!--内容开始-->
+<div class="community-detail-banner">
+  <img class="am-img-responsive" src="/assets/dist/images/community_banner.png" alt="banner"/>
+</div>
+<div class="community-detail-content">
+  <h2><span class="am-badge am-badge-primary am-round">精</span>帖子的主题（字数有限制）</h2>
+  <div class="am-g am-g-collapse display-table info">
+    <div class="am-u-sm-6 display-table-cell am-text-middle">
+      <img class="am-circle" src="/assets/dist/images/game1.png" alt="user">
+      巅峰寂寞
+    </div>
+    <div class="am-u-sm-6 display-table-cell am-text-middle am-text-right">
+      创建于06-12 09:12
+    </div>
+  </div>
+  <div class="am-g">
+    <div class="am-u-sm-12">
+      仅仅是UI<br/>
+      许多人使用React作为MVC架构的V层。 尽管React并没有假设过你的其余技术栈， 但它仍可以作为一个小特征轻易地在已有项目中使用<br/>
+      虚拟DOM<br/>
+      React为了更高超的性能而使用虚拟DOM作为其不同的实现。 它同时也可以由服务端Node.js渲染 － 而不需要过重的浏览器DOM支持<br/>
+      数据流<br/>
+      React实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。<br/>
+      仅仅是UI<br/>
+      许多人使用React作为MVC架构的V层。 尽管React并没有假设过你的其余技术栈， 但它仍可以作为一个小特征轻易地在已有项目中使用<br/>
+      虚拟DOM<br/>
+      React为了更高超的性能而使用虚拟DOM作为其不同的实现。 它同时也可以由服务端Node.js渲染 － 而不需要过重的浏览器DOM支持<br/>
+      数据流<br/>
+      React实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。<br/>
+      仅仅是UI<br/>
+      许多人使用React作为MVC架构的V层。 尽管React并没有假设过你的其余技术栈， 但它仍可以作为一个小特征轻易地在已有项目中使用<br/>
+      虚拟DOM<br/>
+      React为了更高超的性能而使用虚拟DOM作为其不同的实现。 它同时也可以由服务端Node.js渲染 － 而不需要过重的浏览器DOM支持<br/>
+      数据流<br/>
+      React实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。<br/>
+    </div>
+  </div>
+  <ul class="am-list am-list-static choose-goods-list">
+    <li>
+      <a href="/goods/detail">
+        <div class="am-g am-g-collapse display-table choose-game-info">
+          <div class="am-u-sm-5 display-table-cell am-text-middle">
+            <i class="am-icon-circle am-text-middle text-info"></i>
+            <img class="am-img-thumbnail am-radius" src="/assets/dist/images/goods_pic01.png" alt="info">
+          </div>
+          <div class="am-u-sm-6 display-table-cell am-text-middle">
+            <h3>商品名称</h3>
+            <p>
+              <i class="icon icon-z-gold-sm am-text-middle"></i>
+              <span class="text-miss am-text-middle">价格:<span class="text-info">￥6666.66</span></span>
+            </p>
+          </div>
+          <!--<div class="am-u-sm-1 display-table-cell am-text-middle">-->
+            <!--<span class="am-badge am-badge-primary am-round text-info border-info">go</span>-->
+          <!--</div>-->
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!--底部-->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default community-detail-footer" id="">
+  <ul class="am-g">
+    <li class="am-u-sm-3 am-text-center am-text-middle">
+        <span class="am-icon-star-o"></span>
+    </li>
+    <li class="am-u-sm-5" data-am-navbar-share>
+        <span class="am-icon-share-square-o"></span>
+    </li>
+    <li class="am-u-sm-4 thumbs-up">
+        <span class="am-icon-thumbs-up am-text-middle" id="thumbsBtn"></span>
+        <span class="am-text-middle" id="thumbsNumTxt">12313</span>
+    </li>
+  </ul>
+</div>
+<script src="/assets/dist/js/seajs/sea.js" id="seajsnode"></script>
+<script>
+  seajs.use(['community/detail'], function (main, tools) {
+    main.init();
+  })
+</script>

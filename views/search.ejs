@@ -1,0 +1,64 @@
+<!--头部开始-->
+<div class="am-g search-page">
+  <!--header-->
+  <header data-am-widget="header" class="am-header am-header-default search-page">
+    <form action="searchResult" class="am-form am-form-inline" id="searchForm">
+      <div class="am-header-left am-header-nav">
+        <a href="javascript:history.go(-1)" class="">
+          <i class="am-header-icon am-icon-angle-left"></i>
+        </a>
+      </div>
+      <h1 class="am-header-title">
+          <div class="am-form-group am-form-icon">
+            <i class="am-icon-search"></i>
+            <input type="text" class="am-form-field" id="searchTxt" placeholder="关键字">
+          </div>
+
+      </h1>
+      <div class="am-header-right am-header-nav">
+        <a type="submit" href="javascript:;;" class="" id="addSearchBtn">
+          <i class="am-header-icon am-icon-search"></i>
+        </a>
+      </div>
+    </form>
+  </header>
+  <ul class="am-list">
+    <li class="am-g am-g-collapse">
+      <a class="display-table" href="searchTop">
+        <div class="am-u-sm-1 am-text-middle display-table-cell">
+          <i class="am-icon-circle text-danger"></i>
+        </div>
+        <div class="am-u-sm-10 display-table-cell am-text-middle">
+          <p>
+            <span>WE榜</span>
+          </p>
+          <p>
+            <span class="text-miss">本周WE最新排行榜</span>
+          </p>
+        </div>
+        <div class="am-u-sm-1 display-table-cell am-text-middle am-text-right">
+          <i class="am-icon-chevron-right"></i>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <ul class="am-list search-history" id="searchHistory">
+    <li class="text-info">搜索历史</li>
+    <li style="background-color: #f5f5f5">
+      <ul class="am-list" id="historyList">
+      </ul>
+    </li>
+    <li class="am-text-center">
+        <a class="text-info" href="javascript:;;" id="clearHistoryBtn">清除所有搜索历史</a>
+    </li>
+  </ul>
+</div>
+<script src="/assets/dist/js/seajs/sea.js" id="seajsnode"></script>
+<script>
+  seajs.use(['home/search'], function (main) {
+    main.addHistory();
+    main.getHistory();
+    main.delHistory();
+    main.showHistory();
+  })
+</script>

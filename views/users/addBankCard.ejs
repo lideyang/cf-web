@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/assets/dist/css/account.css">
+<style>
+  .vld-tooltip{
+    left:10em;
+  }
+</style>
+<!--头部开始-->
+<div class="am-g account-header">
+  <!--header-->
+  <header data-am-widget="header" class="am-header am-header-default">
+    <div class="am-header-left am-header-nav">
+      <a href="javascript:history.go(-1)" class="">
+        <i class="am-header-icon am-icon-angle-left"></i>
+      </a>
+    </div>
+    <h1 class="am-header-title">
+      <a href="#title-link" class="">
+        <%=title.substring(title.indexOf('-')+1,title.length)%>
+      </a>
+    </h1>
+  </header>
+</div>
+<div class="am-g address-edit">
+  <div class="am-u-sm-11 am-u-sm-centered">
+    <form id="addBankCardForm" action="/users/index" class="am-form">
+      <input type="hidden" id="loginId" name="loginId" value="" />
+      <div class="am-form-group am-form-icon">
+        <i class="am-icon-credit-card text-info"></i>
+        <i class="am-icon-name text-muted">银行卡号</i>
+        <input id="bankId" name="password" type="text" class="am-form-field" placeholder="请输入银行卡号">
+      </div>
+      <div class="am-form-group am-form-icon">
+        <i class="am-icon-user text-info"></i>
+        <i class="am-icon-name text-muted">开户名</i>
+        <input id="bankName" name="password" type="text" class="am-form-field" placeholder="请输入银行卡开户名">
+      </div>
+      <div class="am-form-group am-form-icon">
+        <i class="am-icon-map-marker text-info"></i>
+        <i class="am-icon-name text-muted">开户行</i>
+        <select id="bankList" class="am-form-field" data-am-selected="{maxHeight: 160}">
+          <option value="a">中国银行</option>
+          <option value="b">建设银行</option>
+          <option value="o">工商银行</option>
+          <option value="a">中国银行</option>
+          <option value="b">建设银行</option>
+          <option value="o">工商银行</option>
+          <option value="a">中国银行</option>
+          <option value="b">建设银行</option>
+          <option value="o">工商银行</option>
+        </select>
+      </div>
+      <div class="am-u-sm-12 am-u-sm-centered submit-group">
+        <button type="submit" class="am-btn am-btn-primary am-btn-block am-radius">添加新卡</button>
+      </div>
+    </form>
+  </div>
+</div>
+<% include footer %>
+<script>
+  seajs.use(['users/addBankCard', 'tools'], function (main, tools) {
+    main.init();
+    tools.inputValueClear('input');
+  })
+</script>

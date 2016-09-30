@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="/assets/dist/css/goods.css">
+<!--头部开始-->
+<div class="am-g  goods-header">
+    <!--header-->
+    <header data-am-widget="header" class="am-header am-header-default">
+        <div class="am-header-left am-header-nav">
+            <a href="javascript:history.go(-1)" class="">
+                <i class="am-header-icon am-icon-angle-left"></i>
+            </a>
+        </div>
+        <h1 class="am-header-title">
+            <a href="#title-link" class="">
+                <%=title.substring(title.indexOf('-')+1,title.length)%>
+            </a>
+        </h1>
+    </header>
+</div>
+<div class="award-progress">
+    <!--split-->
+</div>
+<!--头部开始-->
+<ul class="am-list am-list-static choose-goods-list award-list">
+    <li>
+        <div class="am-g am-g-collapse display-table choose-game-info">
+            <div class="am-u-sm-1 display-table-cell am-text-middle">
+                <i class="am-icon-map-marker am-text-middle text-info am-text-lg"></i>
+            </div>
+            <div class="am-u-sm-10 display-table-cell am-text-middle">
+                <h3>商品名称</h3>
+                <p class="text-miss">
+                    18888888888
+                </p>
+                <p class="text-miss">
+                    广东省韶关市武江区XX路XX号
+                </p>
+            </div>
+            <div class="am-u-sm-1 display-table-cell am-text-middle">
+                <a href="/account/address" class="am-icon-chevron-right am-text-middle am-text-right text-miss"></a>
+            </div>
+        </div>
+    </li>
+    <li>
+        <a href="#">
+            <div class="am-g am-g-collapse choose-game-info">
+                <div class="am-u-sm-5">
+                    <i class="am-icon-circle am-text-middle text-info"></i>
+                    <img class="am-img-thumbnail am-radius" src="/assets/dist/images/goods_pic01.png" alt="info" />
+                </div>
+                <div class="am-u-sm-7">
+                    <h3>商品名称</h3>
+                    <p>
+                        <span class="text-info am-text-middle">众筹产品</span>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
+<!--底部-->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default goods-detail-footer" id="">
+    <div class="award-progress">
+        <!--split-->
+    </div>
+    <ul class="am-navbar-nav am-cf am-avg-sm-3"  style="background-color:#fafafa">
+        <li class="">
+            <button id="orderCommitBtn" href="#" class="am-btn am-btn-primary am-btn-sm am-vertical-align-middle submit" style="margin-bottom:10px">领奖</button>
+        </li>
+    </ul>
+</div>
+<% include footer %>
+<script>
+  seajs.use(['goods/award', 'tools'], function (main, tools) {
+    main.init();
+    tools.inputValueClear('input');
+  })
+</script>
